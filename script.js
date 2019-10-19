@@ -29,6 +29,9 @@
       .then(response => {
         container.innerHTML = '';
         cards = [];
+        pacmanInserted = false;
+        eatenCards = 0;
+        steps = 1;
         response.hits.forEach(picture => {
 
           const imgElement = document.createElement('img');
@@ -61,8 +64,6 @@
     }
     const left = steps * 100;
     const card = cards[cards.length - 1];
-
-    console.log(cards);
 
     setTimeout(() => {
       if (left % 400 === 0 && left > 400) {

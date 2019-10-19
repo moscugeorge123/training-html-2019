@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Positions</title>
+  <style>
+    body {
+      padding: 100px;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+    }
+
+    .box {
+      flex-basis: 32%;
+      margin: 0.5%;
+      height: 400px;
+      background: lightgreen;
+    }
+
+    .box1 {
+      position: static;
+    }
+    .box2 {
+      position: relative;
+    }
+    .box3 {
+      position: relative;
+    }
+    .example {
+      top: 50px;
+      left: 90px;
+      height: 100px;
+      width: 100px;
+      background: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">
+    <p>position relative</p>
+    <div class="example" style="position: absolute;">
+      Static -> position absolute
+    </div>
+  </div>
+  <div class="box box2">
+    <p>position static</p>
+    <div class="example" style="position: absolute;">
+      Relative -> position absolute
+    </div>
+  </div>
+  <div class="box box3">
+    <p>position relative</p>
+    <div class="example" style="position: fixed; top: 100px; right: 90px; left: unset">
+      Relative -> position fixed
+    </div>
+  </div>
+</body>
+</html>
